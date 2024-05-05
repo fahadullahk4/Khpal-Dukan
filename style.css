@@ -1,0 +1,267 @@
+@font-face {
+    font-family: indie;
+    src: url("fonts/IndieFlower-Regular.woff");
+}
+
+:root {
+    --loader-color: #222;
+    --white-text: #fff;
+    --loader-font: indie;
+    --info-color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: qanelas;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    cursor: default;
+}
+
+.dark-mode {
+    background-color: #222;
+}
+
+.light-mode {}
+
+.loader-section {
+    /* !later have to convert it display flex*/
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--loader-color);
+    color: var(--white-text);
+    position: relative;
+    font-family: var(--loader-font);
+    overflow-x: hidden;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.loader h1 {
+    font-size: 8vw;
+    overflow-y: hidden;
+}
+
+.loader-animation {
+    width: 4.5vw;
+    height: 4.5vw;
+    aspect-ratio: 1;
+    --c: no-repeat linear-gradient(#ffffff 0 0);
+    background:
+        var(--c) 0% 50%,
+        var(--c) 50% 50%,
+        var(--c) 100% 50%;
+    background-size: 20% 100%;
+    animation: l1 1.5s infinite linear;
+
+
+}
+
+@keyframes l1 {
+    0% {
+        background-size: 20% 100%, 20% 100%, 20% 100%
+    }
+
+    33% {
+        background-size: 20% 10%, 20% 100%, 20% 100%
+    }
+
+    50% {
+        background-size: 20% 100%, 20% 10%, 20% 100%
+    }
+
+    66% {
+        background-size: 20% 100%, 20% 100%, 20% 10%
+    }
+
+    100% {
+        background-size: 20% 100%, 20% 100%, 20% 100%
+    }
+}
+
+.hero-section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* background-color: aquamarine; */
+    /* overflow-x: hidden; */
+}
+
+.hero-content .info {
+    width: 100%;
+    height: 2vw;
+    background-color: var(--info-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-text);
+    padding: 1.5vw 5vw;
+    /* overflow-x: hidden; */
+}
+
+.info .pt-1 {
+    display: flex;
+    gap: 1vw;
+}
+
+.info .pt-1 h5,
+.info .pt-2 h5,
+.info .pt-3 h5 {
+    font-weight: 400;
+}
+
+.info .pt-3 {
+    display: flex;
+    gap: 3vw;
+}
+
+nav {
+    width: 100vw;
+    height: 3vw;
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 5vw;
+}
+
+nav h1 {
+    font-size: 2vw;
+    font-weight: 900;
+    font-family: var(--loader-font);
+    overflow: hidden;
+}
+
+nav .nav-pt-1,
+nav .nav-pt-2 {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+}
+
+nav .nav-pt-1 h4,
+nav .nav-pt-2 h4 {
+    font-weight: 400;
+}
+
+nav .nav-pt-2 i {
+    margin-right: 0.7vw;
+}
+
+.nav-pt-2 i:nth-child(2) {
+    font-size: 1.3vw;
+    position: absolute;
+    right: 53%;
+}
+
+.nav-pt-2 i:nth-child(5) {
+    font-size: 1.5vw;
+}
+
+.search-box {
+    border-radius: 0.7vw;
+    border: none;
+    background-color: #e2e7ea69;
+    padding: 0.5vw 4vw;
+}
+
+.search-box:focus {
+    outline: none;
+}
+
+.hero-content-pt-2 {
+    width: 100vw;
+    height: 83vh;
+    position: relative;
+    padding: 1.5vw 5vw;
+
+    display: flex;
+}
+
+.hero-content-pt-2 .side-1 {
+    width: 55vw;
+    height: 100%;
+    padding: 7.5vw 3vw;
+}
+
+.hero-content-pt-2 .side-1 h5 {
+    background-color: rgb(241, 192, 27);
+    width: 10vw;
+    border-radius: 0.6vw;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 1.5vw;
+    padding: 0.4vw;
+}
+
+.hero-content-pt-2 .side-1 h1 {
+    font-size: 3.5vw;
+    font-weight: 900;
+    margin-bottom: 1vw;
+    width: 40vw;
+    overflow-y: hidden;
+}
+
+.hero-content-pt-2 .side-1 p {
+    font-size: 1.2vw;
+    font-weight: 400;
+    width: 33vw;
+    line-height: 1.3;
+    margin-bottom: 1vw;
+}
+
+.hero-content-pt-2 .side-1 button {
+    padding: 0.6vw 2vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: #000;
+    color: var(--white-text);
+}
+
+.hero-content-pt-2 .content-wrapper .side-2 {
+    width: 45vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-pt-2 .content-wrapper .side-2 img {
+    width: 103%;
+    height: 96.7%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    mix-blend-mode: darken;
+
+
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(111deg, rgba(244 248,
+                249, 1) 44%, rgba(244 248, 249, 1) 44%, rgba(225, 230, 234, 1) 86%);
+}
