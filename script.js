@@ -80,24 +80,26 @@ function heroSectionAnimation() {
 	});
 }
 
-var darkMode = document.querySelector("#dark");
-// var lightMode = document.querySelector("#dark");
-var body = document.querySelector("body");
-darkMode.addEventListener("click", () => {
-	console.log("click");
-	body.classList.add("dark-mode");
-	darkMode.classList.add("ri-sun-line");
-	darkMode.classList.remove("ri-moon-line");
-});
-darkMode.addEventListener("click", () => {
-	console.log("click");
-	body.classList.remove("dark-mode");
-	darkMode.classList.remove("ri-sun-line");
-	darkMode.classList.add("ri-moon-line");
-});
-// modes.addEventListener("click", () => {
-// 	body.classList.add("dark-mode");
-// });
+function darkMode() {
+	var darkMode = document.querySelector("#dark");
+	// var lightMode = document.querySelector("#dark");
+	var body = document.querySelector("body");
+	darkMode.addEventListener("click", () => {
+		console.log("click");
+		if (body.classList.contains("light-mode")) {
+			body.classList.remove("light-mode");
+			body.classList.add("dark-mode");
+			darkMode.classList.add("ri-sun-line");
+			darkMode.classList.remove("ri-moon-line");
+		} else {
+			body.classList.remove("dark-mode");
+			body.classList.add("light-mode");
+			darkMode.classList.remove("ri-sun-line");
+			darkMode.classList.add("ri-moon-line");
+		}
+	});
+}
 
 // loaderAnimation();
 // heroSectionAnimation();
+//darkMode();
