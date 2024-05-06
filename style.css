@@ -44,12 +44,12 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--loader-color);
     color: var(--white-text);
     position: relative;
     font-family: var(--loader-font);
-    overflow-x: hidden;
+    z-index: 9999;
 }
 
 .loader {
@@ -106,8 +106,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
-    /* background-color: aquamarine; */
-    /* overflow-x: hidden; */
+    z-index: 99;
 }
 
 .hero-content .info {
@@ -271,7 +270,6 @@ nav .nav-pt-2 i {
 .categories-section {
     width: 100%;
     min-height: 100vh;
-    /* background-color: aqua; */
     padding: 1.5vw 5vw;
     position: relative;
 }
@@ -285,7 +283,7 @@ nav .nav-pt-2 i {
 .categories-filter {
     display: flex;
     align-items: center;
-    gap: 2vw;
+    gap: 0.7vw;
 }
 
 .categories-filter h4 {
@@ -295,6 +293,8 @@ nav .nav-pt-2 i {
     border-radius: 1vw;
     padding: 0.4vw 0.8vw;
     background-color: var(--items-bg-color);
+    width: 21vw;
+    text-align: center;
 }
 
 .categories-section .filter-btn button {
@@ -302,10 +302,15 @@ nav .nav-pt-2 i {
     font-size: 1.1vw;
     border: 1px solid #000;
     border-radius: 1vw;
-    position: absolute;
-    right: 5.5%;
-    top: 10.9%;
     background-color: transparent;
+}
+
+.categories-section .filter-btn {
+    width: 27vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
 }
 
 .categories-section .underline {
@@ -324,10 +329,18 @@ nav .nav-pt-2 i {
     min-height: 100vh;
 }
 
+.categories-section a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vw;
+}
+
 .categories-cards .card {
     position: relative;
     width: 20vw;
     height: 25.7vw;
+    padding-left: 1.5vw;
 }
 
 .card .card-img {
@@ -341,7 +354,7 @@ nav .nav-pt-2 i {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 
 .card-content {
@@ -384,5 +397,70 @@ nav .nav-pt-2 i {
     margin-top: 1.5vw;
     background-color: transparent;
     margin-bottom: 0.6vw;
+}
 
+.deals-section {
+    width: 100%;
+    height: 100vh;
+    padding: 1.5vw 5vw;
+    position: relative;
+    background-color: aquamarine;
+}
+
+.deals-section .deals-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deals-section h1 {
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+.deals-section h4 {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+.deals-section .underline {
+    width: 100%;
+    height: 0.13vw;
+    background-color: var(--items-bg-color);
+    margin-top: 1vw;
+}
+
+.deals-section .deals-cards {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+    width: 100%;
+    height: 55vh;
+    position: relative;
+}
+
+.deals-cards .card-1 {
+    border-radius: 1vw;
+    width: 50%;
+    height: 100%;
+    background-color: var(--items-bg-color);
+}
+
+.deals-cards .card-2 {
+    border-radius: 1vw;
+    width: 50%;
+    height: 100%;
+    background-color: var(--items-bg-color);
+}
+
+.deals-section .deal-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+    margin-top: 2vw;
+    width: 100%;
+    height: 19vh;
+    position: relative;
+    background-color: red;
 }

@@ -1,9 +1,9 @@
 function loaderAnimation() {
-	gsap.to(".loader-section", {
-		duration: 1,
-		delay: 3.5,
+	var tl = gsap.timeline()
+	tl.to(".loader-section", {
+		opacity: 1,
+		duration: 2.8,
 		ease: "power1",
-		opacity: 0,
 	});
 
 	gsap.from(".loader h1", {
@@ -20,15 +20,11 @@ function loaderAnimation() {
 		delay: 0.4,
 	});
 
-	gsap.to(
-		".loader-section",
-		{
-			duration: 0.5,
-			ease: "power1.out",
-			display: "none",
-		},
-		"-=0.8"
-	);
+	tl.to(".loader-section", {
+		ease: "power1.out",
+		scale: 0,
+		display: "none"
+	});
 }
 
 function heroSectionAnimation() {
@@ -38,6 +34,7 @@ function heroSectionAnimation() {
 		y: 120,
 		duration: 0.7,
 		opacity: 0,
+		delay: 3.2,
 	});
 
 	tl.from("nav h1", {
@@ -102,4 +99,4 @@ function darkMode() {
 
 // loaderAnimation();
 // heroSectionAnimation();
-//darkMode();
+// darkMode();
