@@ -118,7 +118,6 @@ body {
     align-items: center;
     color: var(--white-text);
     padding: 1.5vw 5vw;
-    /* overflow-x: hidden; */
 }
 
 .info .pt-1 {
@@ -148,7 +147,7 @@ nav {
 }
 
 nav h1 {
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-weight: 900;
     font-family: var(--loader-font);
     overflow: hidden;
@@ -754,7 +753,7 @@ nav .nav-pt-2 i {
     margin-top: 2vw;
     width: 27vw;
     height: 25.7vw;
-    border-radius: 1vw;    
+    border-radius: 1vw;
     background-color: var(--items-bg-color);
 }
 
@@ -771,6 +770,7 @@ nav .nav-pt-2 i {
     object-position: center;
     border-radius: 1vw 1vw 0 0;
 }
+
 .card-service h3 {
     font-size: 1.8vw;
     font-weight: 700;
@@ -783,4 +783,152 @@ nav .nav-pt-2 i {
     font-weight: 300;
     padding-top: 0.6vw;
     padding-left: 1.5vw;
+}
+
+.footer-content {
+    width: 100%;
+    height: 60vh;
+    background-color: #F4F9FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw 5vw;
+    position: relative;
+}
+
+.footer-content .logo-side {
+    width: 25%;
+    height: 90%;
+    margin-right: 10%;
+    margin-top: 4%;
+}
+
+.logo-side h1 {
+    font-size: 3vw;
+    font-weight: 800;
+    font-family: var(--loader-font);
+}
+
+.logo-side p {
+    font-size: 1.1vw;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 1.5vw;
+}
+
+.logo-side h3 {
+    font-size: 2vw;
+    font-weight: 600;
+    margin-top: 1vw;
+}
+
+.logo-side .payment-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+    gap: 1vw;
+}
+
+.payment-icons i {
+    font-size: 1.3vw;
+    color: #000;
+}
+
+.footer-content .money {
+    width: 16%;
+    height: 90%;
+    margin-top: 5.5vw;
+    margin-right: 3vw;
+}
+
+.money h2 {
+    font-size: 2.2vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+
+.money h5 {
+    font-size: 0.9vw;
+    margin-top: 0.6vw;
+    font-weight: 400;
+}
+
+.footer-content .product {
+    width: 16%;
+    height: 90%;
+    margin-top: 5.5vw;
+}
+
+.product h2 {
+    font-size: 2.2vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+
+.product h5 {
+    font-size: 0.9vw;
+    margin-top: 0.6vw;
+    font-weight: 400;
+}
+
+.footer-content .help {
+    width: 16%;
+    height: 90%;
+    margin-top: 5.5vw;
+}
+
+.help h2 {
+    font-size: 2.2vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+
+.help h5 {
+    font-size: 0.9vw;
+    margin-top: 0.6vw;
+    font-weight: 400;
+}
+
+.footer-content .know-us {
+    width: 16%;
+    height: 90%;
+    margin-top: 5.5vw;
+}
+
+.know-us h2 {
+    font-size: 2.2vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+}
+
+.know-us h5 {
+    font-size: 0.9vw;
+    margin-top: 0.6vw;
+    font-weight: 400;
+}
+
+footer .info {
+    width: 100%;
+    background-color: var(--info-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-text);
+    padding: 0.6vw 5vw;
+}
+
+.info .pt-1 {
+    display: flex;
+    gap: 1vw;
+}
+
+.info .pt-1 h5,
+.info .pt-2 h5,
+.info .pt-3 h5 {
+    font-weight: 400;
+}
+
+.info .pt-3 {
+    display: flex;
+    gap: 3vw;
 }
