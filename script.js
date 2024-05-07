@@ -1,5 +1,5 @@
 function loaderAnimation() {
-	var tl = gsap.timeline()
+	var tl = gsap.timeline();
 	tl.to(".loader-section", {
 		opacity: 1,
 		duration: 2.8,
@@ -23,7 +23,7 @@ function loaderAnimation() {
 	tl.to(".loader-section", {
 		ease: "power1.out",
 		scale: 0,
-		display: "none"
+		display: "none",
 	});
 }
 
@@ -79,7 +79,6 @@ function heroSectionAnimation() {
 
 function darkMode() {
 	var darkMode = document.querySelector("#dark");
-	// var lightMode = document.querySelector("#dark");
 	var body = document.querySelector("body");
 	darkMode.addEventListener("click", () => {
 		console.log("click");
@@ -99,4 +98,4 @@ function darkMode() {
 
 // loaderAnimation();
 // heroSectionAnimation();
-// darkMode();
+darkMode();

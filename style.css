@@ -6,6 +6,7 @@
 :root {
     --loader-color: #222;
     --white-text: #fff;
+    --black-text: #000;
     --loader-font: indie;
     --info-color: #000;
     --items-bg-color: #EBEFF2;
@@ -31,11 +32,75 @@ body {
 .dark-mode {
     background-color: #222;
     color: var(--white-text);
-}
 
-.light-mode {
-    background-color: #fff;
-    color: #000;
+    a {
+        color: var(--white-text);
+    }
+
+    nav .search-box,
+    nav .search-box::placeholder {
+        color: var(--white-text);
+    }
+
+    .content-wrapper {
+        background: #333;
+    }
+
+    .content-wrapper .side-1 {
+        background-color: #333;
+
+    }
+
+    .content-wrapper .side-2 {
+        mix-blend-mode: lighten;
+    }
+
+    .categories-filter h4 {
+        color: var(--white-text);
+        background-color: var(--loader-color);
+    }
+
+    .categories-filter button {
+        color: var(--white-text);
+        background-color: var(--loader-color);
+    }
+
+    .categories-cards .card .card-btn button {
+        color: var(--white-text);
+        background-color: #000;
+    }
+
+    .deals-cards .card-1,
+    .deals-cards .card-2 {
+        background-color: #333;
+    }
+
+    .deals-section .deal-banner {
+        background: #333;
+    }
+
+    .best-sellers-cards .card-1 {
+        background-color: #333;
+    }
+
+    .best-sellers-cards .card button {
+        color: var(--white-text);
+        background-color: #000;
+    }
+
+    .services-cards .card-service {
+        background-color: #333;
+    }
+
+    .footer-content {
+        background-color: #333;
+        color: var(--white-text);
+    }
+
+    .footer-content i {
+        color: var(--white-text);
+    }
+
 }
 
 .loader-section {
@@ -68,7 +133,7 @@ body {
 .loader-animation {
     width: 4.5vw;
     height: 4.5vw;
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
     --c: no-repeat linear-gradient(#ffffff 0 0);
     background:
         var(--c) 0% 50%,
@@ -76,8 +141,6 @@ body {
         var(--c) 100% 50%;
     background-size: 20% 100%;
     animation: l1 1.5s infinite linear;
-
-
 }
 
 @keyframes l1 {
@@ -550,8 +613,7 @@ nav .nav-pt-2 i {
     position: relative;
     padding: 4vw;
     border-radius: 1vw;
-    background: linear-gradient(111deg, rgba(244 248,
-                249, 1) 4%, rgba(244 248, 249, 1) 54%, rgba(225, 230, 234, 1) 56%);
+    background: linear-gradient(111deg, rgba(244, 248, 249, 1) 4%, rgba(244, 248, 249, 1) 54%, rgba(225, 230, 234, 1) 56%);
 }
 
 .best-sellers-section {
