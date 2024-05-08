@@ -81,7 +81,6 @@ function darkMode() {
 	var darkMode = document.querySelector("#dark");
 	var body = document.querySelector("body");
 	darkMode.addEventListener("click", () => {
-		console.log("click");
 		if (body.classList.contains("light-mode")) {
 			body.classList.remove("light-mode");
 			body.classList.add("dark-mode");
