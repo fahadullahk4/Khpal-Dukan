@@ -95,6 +95,57 @@ function darkMode() {
 	});
 }
 
+function menuAnimation() {
+	let menu = document.querySelector(".menu");
+	let dark = document.querySelector(".full-menu #dark");
+	let close = document.querySelector(".full-menu #close");
+	var tl = gsap.timeline();
+	tl.to(".full-menu", {
+		right: 0,
+		duration: 0.5,
+	});
+
+	tl.from(".full-menu h4", {
+		x: 100,
+		opacity: 0,
+		stagger: 0.2,
+		duration: 0.5,
+	});
+
+	tl.from(".full-menu i", {
+		opacity: 0,
+		scale: 0.5,
+		duration: 0.2,
+	});
+
+	tl.pause();
+	menu.addEventListener("click", () => {
+		tl.play();
+		menu.style.opacity = 0;
+	});
+
+	var body = document.querySelector("body");
+	dark.addEventListener("click", () => {
+		if (body.classList.contains("light-mode")) {
+			body.classList.remove("light-mode");
+			body.classList.add("dark-mode");
+			dark.classList.add("ri-sun-line");
+			dark.classList.remove("ri-moon-line");
+		} else {
+			body.classList.remove("dark-mode");
+			body.classList.add("light-mode");
+			dark.classList.remove("ri-sun-line");
+			dark.classList.add("ri-moon-line");
+		}
+	});
+
+	close.addEventListener("click", () => {
+		tl.reverse();
+		menu.style.opacity = 1;
+	});
+}
+
 // loaderAnimation();
 // heroSectionAnimation();
 darkMode();
+menuAnimation();
