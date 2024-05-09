@@ -50,6 +50,21 @@ body {
 
     .content-wrapper {
         background: #333;
+        overflow: hidden;
+    }
+
+    .content-wrapper .side-1 button {
+        background-color: transparent;
+        border: 1px solid;
+        color: var(--white-text);
+
+    }
+
+    .content-wrapper .side-1 button:hover {
+        background-color: var(--white-text);
+        color: var(--black-text);
+        border: none;
+        transition: all ease 0.7s;
     }
 
     .content-wrapper .side-1 {
@@ -67,13 +82,29 @@ body {
     }
 
     .categories-filter button {
+        background-color: transparent;
         color: var(--white-text);
-        background-color: var(--loader-color);
+        border: 1px solid;
+    }
+
+    .categories-filter button:hover {
+        background-color: var(--white-text);
+        color: var(--black-text);
+        border: none;
+        transition: all ease 0.7s;
     }
 
     .categories-cards .card .card-btn button {
+        background-color: transparent;
+        border: 1px solid;
         color: var(--white-text);
-        background-color: #000;
+    }
+
+    .categories-cards .card .card-btn button:hover {
+        background-color: var(--white-text);
+        color: var(--black-text);
+        border: none;
+        transition: all ease 0.7s;
     }
 
     .deals-cards .card-1,
@@ -89,9 +120,30 @@ body {
         background-color: #333;
     }
 
-    .best-sellers-cards .card button {
+    .best-sellers-cards .card-1 button {
+        background-color: transparent;
+        border: 1px solid;
         color: var(--white-text);
-        background-color: #000;
+    }
+
+    .best-sellers-cards .card-1 button:hover {
+        background-color: var(--white-text);
+        color: var(--black-text);
+        border: none;
+        transition: all ease 0.7s;
+    }
+
+    .best-sellers-cards .card button {
+        background-color: transparent;
+        border: 1px solid;
+        color: var(--white-text);
+    }
+
+    .best-sellers-cards .card button:hover {
+        background-color: var(--white-text);
+        color: var(--black-text);
+        border: none;
+        transition: all ease 0.7s;
     }
 
     .services-cards .card-service {
@@ -210,7 +262,7 @@ nav {
     height: 3vw;
     margin-top: 1vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
     padding: 0 5vw;
 }
@@ -272,6 +324,11 @@ nav #dark {
     padding: 0.5vw 4vw;
 }
 
+.search-box::placeholder {
+    position: absolute;
+    left: 1.5vw;
+}
+
 .search-box:focus {
     outline: none;
 }
@@ -328,10 +385,17 @@ nav #dark {
 
 .hero-content-pt-2 .side-1 button {
     padding: 0.6vw 2vw;
-    border: none;
+    color: var(--black-text);
+    border: 1px solid;
     border-radius: 0.5vw;
-    background-color: #000;
+}
+
+.hero-content-pt-2 .side-1 button:hover {
+    background-color: var(--black-text);
+    border: none;
     color: var(--white-text);
+    background-color: #333;
+    transition: all ease 0.7s;
 }
 
 .hero-content-pt-2 .content-wrapper .side-2 {
@@ -383,11 +447,26 @@ nav #dark {
 }
 
 .categories-section .filter-btn button {
-    padding: 0.4vw 1vw;
-    font-size: 1.1vw;
-    border: 1px solid #000;
+
+    border: 1px solid #333;
     border-radius: 1vw;
     background-color: transparent;
+}
+
+.categories-section .filter-btn button {
+    padding: 0.4vw 1vw;
+    font-size: 1.1vw;
+    color: var(--black-text);
+    border: 1px solid;
+    border-radius: 1vw;
+}
+
+.categories-section .filter-btn button:hover {
+    background-color: var(--black-text);
+    border: none;
+    color: var(--white-text);
+    background-color: #333;
+    transition: all ease 0.7s;
 }
 
 .categories-section .filter-btn {
@@ -477,11 +556,19 @@ nav #dark {
 .card .card-btn button {
     padding: 0.4vw 1vw;
     font-size: 1.1vw;
-    border: 1px solid #000;
+    color: var(--black-text);
+    border: 1px solid;
     border-radius: 1vw;
     margin-top: 1.5vw;
-    background-color: transparent;
     margin-bottom: 0.6vw;
+}
+
+.card .card-btn button:hover {
+    background-color: var(--black-text);
+    border: none;
+    color: var(--white-text);
+    background-color: #333;
+    transition: all ease 0.7s;
 }
 
 .deals-section {
@@ -769,12 +856,21 @@ nav #dark {
 
 .card-1 .card-btn button {
     padding: 0.4vw 1vw;
+    color: var(--black-text);
+    border: 1px solid;
+    border-radius: 0.5vw;
     font-size: 1.1vw;
-    border: 1px solid #000;
-    border-radius: 1vw;
-    background-color: #000;
-    color: var(--white-text);
     margin-top: 2vw;
+    position: relative;
+    z-index: 999;
+}
+
+.card-1 .card-btn button:hover {
+    background-color: var(--black-text);
+    border: none;
+    color: var(--white-text);
+    background-color: #333;
+    transition: all ease 0.7s;
 }
 
 .card-1 .card-content {
@@ -1031,6 +1127,10 @@ footer .info {
 
     .info .pt-1 {
         align-items: center;
+    } 
+
+    .info .pt-1 i {
+        font-size: 1.7vw;
     }
 
     .info .pt-1 h5,
