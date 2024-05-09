@@ -1,9 +1,10 @@
 function loaderAnimation() {
 	var tl = gsap.timeline();
 	tl.to(".loader-section", {
-		opacity: 1,
-		duration: 2.8,
-		ease: "power1",
+		opacity: 0,
+		duration: 2.2,
+		delay:2.4,
+		ease: "power4",
 	});
 
 	gsap.from(".loader h1", {
@@ -21,8 +22,6 @@ function loaderAnimation() {
 	});
 
 	tl.to(".loader-section", {
-		ease: "power1.out",
-		scale: 0,
 		display: "none",
 	});
 }
@@ -145,7 +144,237 @@ function menuAnimation() {
 	});
 }
 
-// loaderAnimation();
-// heroSectionAnimation();
+function fullAnimation() {
+	let tl = gsap.timeline();
+	tl.from(".categories-section h1", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".categories-section",
+			scroller: "body",
+			start: "top 30%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".categories-filter", {
+		y: 40,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".categories-filter",
+			scroller: "body",
+			start: "top 35%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".categories-section .underline", {
+		width: "0%",
+		opacity: 0,
+		duration: 3,
+		scrollTrigger: {
+			trigger: ".categories-section",
+			scroller: "body",
+			start: "top 20%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".categories-cards .card, a", {
+		y: 30,
+		opacity: 0,
+		stagger: 2,
+		duration: 3,
+		scrollTrigger: {
+			trigger: ".categories-cards .card",
+			scroller: "body",
+			start: "top 47%",
+			end: "bottom -65%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".deals-heading", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".deals-section",
+			scroller: "body",
+			start: "top 25%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".deals-section .underline", {
+		width: "0%",
+		opacity: 0,
+		duration: 3,
+		scrollTrigger: {
+			trigger: ".deals-section",
+			scroller: "body",
+			start: "top 20%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+
+	tl.from(".deals-cards .card-1", {
+		x: -80,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".deals-cards",
+			scroller: "body",
+			start: "top 25%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".deals-cards .card-2", {
+		x: 80,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".deals-cards",
+			scroller: "body",
+			start: "top 25%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".deal-banner", {
+		y: 40,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".deals-cards",
+			scroller: "body",
+			start: "top 15%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".best-sellers-heading", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".best-sellers-section",
+			scroller: "body",
+			start: "top 40%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".best-sellers-section .underline", {
+		width: "0%",
+		opacity: 0,
+		duration: 3,
+		scrollTrigger: {
+			trigger: ".best-sellers-section",
+			scroller: "body",
+			start: "top 20%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".best-sellers-cards .card-1", {
+		height: -40,
+		opacity: 0,
+		duration: 2,
+		scrollTrigger: {
+			trigger: ".best-sellers-cards",
+			scroller: "body",
+			start: "top 25%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".best-sellers-cards .card", {
+		y: 40,
+		opacity: 0,
+		duration: 3,
+		stagger: 2,
+		scrollTrigger: {
+			trigger: ".best-sellers-cards",
+			scroller: "body",
+			start: "top 25%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".services-section h1", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".services-section",
+			scroller: "body",
+			start: "top 40%",
+			end: "top 40%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".services-section .underline", {
+		width: "0%",
+		opacity: 0,
+		duration: 3,
+		scrollTrigger: {
+			trigger: ".services-section",
+			scroller: "body",
+			start: "top 35%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".services-cards .card-service", {
+		y: 40,
+		opacity: 0,
+		duration: 3,
+		stagger: 2,
+		scrollTrigger: {
+			trigger: ".services-cards",
+			scroller: "body",
+			start: "top 35%",
+			end: "top 10%",
+			scrub: 2,
+		},
+	});
+
+	tl.from(".footer-content", {
+		y: 100,
+		opacity: 0,
+		duration: 1,
+		stagger: 2,
+		scrollTrigger: {
+			trigger: "footer",
+			scroller: "body",
+			start: "top 70%",
+			end: "top 50%",
+			scrub: 2,
+		},
+	});
+}
+
+loaderAnimation();
+heroSectionAnimation();
 darkMode();
 menuAnimation();
+fullAnimation();
