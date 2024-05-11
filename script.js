@@ -173,7 +173,7 @@ function fullAnimation() {
 	});
 
 	tl.from(".categories-section .underline", {
-		width: "0%",
+		width: "0vw",
 		opacity: 0,
 		duration: 3,
 		scrollTrigger: {
@@ -373,8 +373,8 @@ function fullAnimation() {
 	});
 }
 
-loaderAnimation();
+// loaderAnimation();
 heroSectionAnimation();
 darkMode();
 menuAnimation();
-fullAnimation();
+// fullAnimation();

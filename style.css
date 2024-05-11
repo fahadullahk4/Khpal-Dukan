@@ -162,7 +162,7 @@ body {
 }
 
 .loader-section {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -1114,8 +1114,12 @@ footer .info {
     }
 
     .hero-section {
-        height: 48vw;
+        height: 100%;
         overflow-x: hidden;
+    }
+
+    .hero-section .info {
+        height: 6vw;
     }
 
     .info .pt-1 {
@@ -1123,32 +1127,32 @@ footer .info {
     }
 
     .info .pt-1 i {
-        font-size: 1.7vw;
+        font-size: 2.3vw;
     }
 
     .info .pt-1 h5,
     .info .pt-2 h5,
     .info .pt-3 h5 {
-        font-size: 1.5vw;
+        font-size: 2.3vw;
     }
 
     nav {
-        height: 3.5vw;
+        height: 7vw;
         justify-content: space-between;
         overflow: hidden;
     }
 
     nav #dark {
-        opacity: 0;
+        display: none;
     }
 
     nav h1 {
-        font-size: 3vw;
+        font-size: 6vw;
     }
 
     .full-menu {
         width: 100%;
-        height: 48vw;
+        height: 100%;
         background-color: #ffffff81;
         position: absolute;
         right: -100%;
@@ -1166,29 +1170,30 @@ footer .info {
     .full-menu #dark {
         opacity: 1;
         position: absolute;
-        top: 11.5vw;
+        top: 20vw;
         right: 6vw;
-        font-size: 4.5vw;
+        font-size: 7vw;
     }
 
     .menu {
         width: 5vw;
         display: flex;
         justify-content: center;
-        font-size: 3.5vw;
+        align-items: center;
+        font-size: 6vw;
     }
 
     .full-menu h4 {
-        font-size: 4vw;
+        font-size: 8vw;
         font-weight: 600;
         margin-bottom: 1.5vw;
     }
 
     .full-menu #close {
         position: absolute;
-        top: 4.6vw;
+        top: 8vw;
         right: 6vw;
-        font-size: 4.5vw;
+        font-size: 7vw;
     }
 
     nav .nav-pt-1,
@@ -1197,54 +1202,80 @@ footer .info {
     }
 
     .hero-content-pt-2 {
-        height: 40vw;
+        height: 100%;
+        width: 100%;
     }
 
     .hero-content-pt-2 .side-1 {
-        width: 55vw;
-        padding: 4.5vw 3vw;
+        width: 84.5vw;
+        padding: 2vw 3vw;
     }
 
+    .hero-content-pt-2 .content-wrapper {
+        padding: 4vw 3vw;
+        display: flex;
+        flex-direction: column;
+        height: 88.3vw;
+    }
+
+    .hero-content-pt-2 .content-wrapper .side-2 {
+        width: 84.5vw;
+        transform: scale(1.21);
+    }
+
+
+    .hero-content-pt-2 .content-wrapper .side-2 img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
     .hero-content-pt-2 .side-1 h5 {
-        width: 13vw;
-        font-size: 1.5vw;
+        width: 28vw;
+        font-size: 3.5vw;
     }
 
     .hero-content-pt-2 .side-1 h1 {
-        font-size: 4vw;
+        font-size: 7vw;
         font-weight: 800;
-        width: 44vw;
+        width: 78vw;
     }
 
     .hero-content-pt-2 .side-1 p {
-        font-size: 1.7vw;
-        width: 44vw;
+        font-size: 2.2vw;
+        width: 78vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
     }
 
     .hero-content-pt-2 .side-1 button {
-        font-size: 1.3vw;
+        font-size: 2.6vw;
     }
 
-    .hero-content-pt-2 .content-wrapper .side-2 img {
-        width: 110%;
-    }
 
     .categories-section {
         width: 100%;
         min-height: 100vw;
+        position: relative;
     }
 
     .categories-section h1 {
-        font-size: 3.2vw;
+        font-size: 6vw;
+    }
+
+    .categories-filter .categories-responsive-hidden {
+        display: none;
     }
 
     .categories-filter h4 {
-        font-size: 1.2vw;
-        width: 24vw;
+        font-size: 3.5vw;
+        width: 34vw;
     }
 
     .categories-section .filter-btn button {
-        font-size: 1.4vw;
+        font-size: 3vw;
+        position: absolute;
+        right: -28.2vw;
     }
 
     .categories-section .underline {
@@ -1253,13 +1284,92 @@ footer .info {
 
     .categories-section .categories-cards {
         justify-content: center;
-        gap: 6vw;
+        /* gap: 16vw; */
     }
 
     .categories-section a {
-        font-size: 1.7vw;
+        font-size: 3vw;
     }
 
+    .categories-cards .card {
+        position: relative;
+        width: 41vw;
+        height: 50vw;
+        padding-left: 1.5vw;
+        background-color: red;
+    }
+
+    .card .card-img {
+        width: 38vw;
+        height: 30vw;
+        background-color: var(--items-bg-color);
+        border-radius: 0.5vw;
+    }
+
+    .card .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .card-content {
+        width: 100%;
+        height: 15vw;
+        /* min-height: auto; */
+        position: relative;
+    }
+
+    .card-content .name-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 7vw;
+        background-color: blue;
+    }
+
+    .card-content .name-price h3 {
+        font-size: 1vw;
+        font-weight: 700;
+        color: white;
+    }
+
+    .card-content .name-price h5 {
+        font-size: 1vw;
+        font-weight: 400;
+        position: absolute;
+        right: 8%;
+    }
+
+    .card-content p {
+        font-size: 7vw;
+        font-weight: 400;
+        margin-bottom: 0.6vw;
+    }
+
+    .card-btn button {
+        padding: 0.4vw 1vw;
+        font-size: 2vw;
+        color: var(--black-text);
+        border: 1px solid;
+        border-radius: 1vw;
+        margin-top: 1.5vw;
+        margin-bottom: 0.6vw;
+    }
+
+    .card .card-btn button:hover {
+        background-color: var(--black-text);
+        border: none;
+        color: var(--white-text);
+        background-color: #333;
+        transition: all ease 0.7s;
+    }
+
+        .card .rating {
+            font-size: 3vw;
+        }
+    /* 
     .card-content .name-price {
         display: flex;
         align-items: center;
@@ -1289,7 +1399,7 @@ footer .info {
 
     .card .rating {
         font-size: 1.4vw;
-    }
+    } */
 
     .deals-section {
         width: 100%;
