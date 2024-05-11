@@ -377,4 +377,4 @@ function fullAnimation() {
 heroSectionAnimation();
 darkMode();
 menuAnimation();
-// fullAnimation();
+fullAnimation();

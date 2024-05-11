@@ -1422,33 +1422,21 @@ footer .info {
 
     .best-sellers-section {
         width: 100%;
-        height: 100vh;
+        height: 100vw;
         padding: 1.5vw 5vw;
         position: relative;
     }
 
-    .best-sellers-section .best-sellers-heading {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        overflow: hidden;
-    }
-
     .best-sellers-heading h1 {
-        font-size: 2vw;
-        font-weight: 800;
+        font-size: 6vw;
     }
 
     .best-sellers-heading h4 {
-        font-size: 1.1vw;
-        font-weight: 500;
+        font-size: 2.5vw;
     }
 
     .best-sellers-section .underline {
-        width: 100%;
-        height: 0.13vw;
-        background-color: var(--items-bg-color);
-        margin-top: 1vw;
+        height: 0.4vw;
     }
 
     .best-sellers-section .best-sellers-cards {
@@ -1457,6 +1445,7 @@ footer .info {
         gap: 1.7vw;
         margin-top: 2vw;
         width: 100%;
+        height: 70vw;
     }
 
     .best-sellers-cards .card {
@@ -1466,27 +1455,27 @@ footer .info {
         padding-left: 1.5vw;
     }
 
-    .card .card-img {
+    .best-sellers-cards .card .card-img {
         width: 20vw;
         height: 15vw;
         background-color: var(--items-bg-color);
         border-radius: 0.5vw;
     }
 
-    .card .card-img img {
+    .best-sellers-cards .card .card-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
 
-    .card-content {
+    .best-sellers-cards .card-content {
         width: 100%;
         min-height: auto;
         position: relative;
     }
 
-    .card-content .name-price {
+    .best-sellers-cards .card-content .name-price {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1494,25 +1483,25 @@ footer .info {
         height: 3vw;
     }
 
-    .card-content .name-price h3 {
+    .best-sellers-cards .card-content .name-price h3 {
         font-size: 1.8vw;
         font-weight: 700;
     }
 
-    .card-content .name-price h5 {
+    .best-sellers-cards .card-content .name-price h5 {
         font-size: 1vw;
         font-weight: 400;
         position: absolute;
         right: 8%;
     }
 
-    .card-content p {
+    .best-sellers-cards .card-content p {
         font-size: 1.1vw;
         font-weight: 400;
         margin-bottom: 0.6vw;
     }
 
-    .card .card-btn button {
+    .best-sellers-cards .card .card-btn button {
         padding: 0.4vw 1vw;
         font-size: 1.1vw;
         border: 1px solid #000;
@@ -1525,20 +1514,24 @@ footer .info {
     /* CARD 1 CSS */
     .best-sellers-cards .card-1 {
         position: relative;
-        width: 22vw;
-        height: 35vw;
+        width: 62vw;
+        height: 25vw;
         padding-left: 1.5vw;
         background-color: var(--items-bg-color);
         border-radius: 1vw;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .card-1 .card-img {
         width: 19vw;
-        height: 15vw;
+        height: 23vw;
         border-radius: 0.5vw;
         position: absolute;
-        bottom: 10.8%;
+        right: 0;
+        /* bottom: %; */
     }
 
     .best-sellers-cards .card-1 img {
@@ -1555,10 +1548,14 @@ footer .info {
         color: var(--black-text);
         border: 1px solid;
         border-radius: 0.5vw;
-        font-size: 1.1vw;
-        margin-top: 2vw;
-        position: relative;
+        font-size: 3vw;
+        margin-top: 6vw;
+        width: 59%;
+        /* height: 10%; */
+        position: absolute;
         z-index: 999;
+        left: 1.4vw;
+
     }
 
     .card-1 .card-btn button:hover {
@@ -1570,26 +1567,146 @@ footer .info {
     }
 
     .card-1 .card-content {
-        width: 100%;
+        width: 96vw;
+        height: 25vw;
         position: relative;
-        padding-top: 3vw;
+        padding: 6vw 0 0 0;
+        background-color: red;
     }
 
     .card-1 .card-content .name-price h3 {
-        font-size: 1.8vw;
-        font-weight: 700;
+        font-size: 4vw;
     }
 
     .card-1 .card-content p {
-        font-size: 1.1vw;
+        font-size: 2.4vw;
         font-weight: 400;
         margin-top: 2vw;
     }
 
 
+    .footer-content {
+        width: 100%;
+        height: 50vw;
+        background-color: #F4F9FF;
+        display: flex;
+        align-items: center;
+        padding: 1.5vw 5vw;
+        position: relative;
+        gap: 3vw;
+    }
+
+    .footer-content .logo-side {
+        width: 40%;
+        height: 90%;
+        margin-right: 2%;
+        margin-top: 4%;
+    }
+
+    .logo-side h1 {
+        font-size: 5vw;
+        width: 100%;
+    }
+
+    .logo-side p {
+        font-size: 2vw;
+        width: 100%;
+    }
+
+    .logo-side h3 {
+        font-size: 2.5vw;
+    }
+
+    .payment-icons i {
+        font-size: 3vw;
+    }
+
+    .footer-content .money {
+        width: 25%;
+        height: 84%;
+        margin-top: 0vw;
+        margin-right: 0vw;
+    }
+
+    .money h2 {
+        font-size: 3vw;
+    }
+
+    .money h5 {
+        font-size: 1.5vw;
+        font-weight: 600;
+    }
+
+    .footer-content .product {
+        width: 15%;
+        height: 84%;
+        margin-top: 0vw;
+    }
+
+    .product h2 {
+        font-size: 3vw;
+    }
+
+    .product h5 {
+        font-size: 1.5vw;
+        font-weight: 600;
+    }
+
+    .footer-content .help {
+        width: 20%;
+        height: 84%;
+        margin-top: 0vw;
+    }
+
+    .help h2 {
+        font-size: 3vw;
+    }
+
+    .help h5 {
+        font-size: 1.5vw;
+        font-weight: 600;
+    }
+
+    .footer-content .know-us {
+        width: 15%;
+        height: 84%;
+        margin-top: 0vw;
+    }
+
+    .know-us h2 {
+        font-size: 3vw;
+    }
+
+    .know-us h5 {
+        font-size: 1.5vw;
+        font-weight: 600;
+    }
+
+    footer .info {
+        height: 6vw;
+    }
+
+    footer .info .pt-1 {
+        align-items: center;
+    }
+
+    footer .info .pt-1 i {
+        font-size: 2.3vw;
+    }
+
+    footer .info .pt-1 h5,
+    footer .info .pt-2 h5,
+    footer .info .pt-3 h5 {
+        font-size: 2.3vw;
+    }
 
 
-    /* 
+}
+
+
+
+
+/* 
 
     .best-sellers-section {
         height: 50vw;
@@ -1677,95 +1794,45 @@ footer .info {
         font-size: 1.4vw;
         width: 23vw;
     }
+} */
 
-    .footer-content {
-        margin-top: 4vw;
-        height: 30vw;
+@media only screen and (min-width: 1024px) and (max-device-width: 1278px) {
+    nav {
+        width: 100%;
+        height: 3vw;
+        margin-top: 1vw;
+        display: flex;
+        position: relative;
         padding: 0 5vw;
     }
 
-    .footer-content .logo-side {
-        height: 90%;
+    nav h1 {
+        font-size: 2vw;
     }
 
-    .logo-side h1 {
-        font-size: 3.2vw;
+    nav .nav-pt-1,
+    nav .nav-pt-2 {
+        gap: 2.4vw;
     }
 
-    .logo-side p {
-        font-size: 1.4vw;
-    }
-
-    .logo-side h3 {
-        font-size: 2.3vw;
-    }
-
-    .payment-icons i {
-        font-size: 1.9vw;
-    }
-
-    .money h2,
-    .product h2,
-    .help h2,
-    .know-us h2 {
-        font-size: 2.3vw;
-    }
-
-    .money h5,
-    .product h5,
-    .help h5,
-    .know-us h5 {
+    nav .nav-pt-1 h4,
+    nav .nav-pt-2 h4 {
+        max-width: 10vw;
         font-size: 1.2vw;
     }
 
-    footer .info .pt-1 {
-        align-items: center;
+    .nav-pt-2 i:nth-child(2) {
+        opacity: 0;
     }
 
-    footer .info .pt-1 h5,
-    footer .info .pt-2 h5,
-    footer .info .pt-3 h5 {
-        font-size: 1.5vw;
+    .search-box {
+        border-radius: 0.7vw;
+        border: none;
+        background-color: #e2e7ea69;
+        padding: 0.5vw 1vw;
     }
-} */
 
-    @media only screen and (min-width: 1024px) and (max-device-width: 1278px) {
-        nav {
-            width: 100%;
-            height: 3vw;
-            margin-top: 1vw;
-            display: flex;
-            position: relative;
-            padding: 0 5vw;
-        }
-
-        nav h1 {
-            font-size: 2vw;
-        }
-
-        nav .nav-pt-1,
-        nav .nav-pt-2 {
-            gap: 2.4vw;
-        }
-
-        nav .nav-pt-1 h4,
-        nav .nav-pt-2 h4 {
-            max-width: 10vw;
-            font-size: 1.2vw;
-        }
-
-        .nav-pt-2 i:nth-child(2) {
-            opacity: 0;
-        }
-
-        .search-box {
-            border-radius: 0.7vw;
-            border: none;
-            background-color: #e2e7ea69;
-            padding: 0.5vw 1vw;
-        }
-
-        .search-box:focus {
-            outline: none;
-        }
+    .search-box:focus {
+        outline: none;
     }
+}
