@@ -652,15 +652,7 @@ nav #dark {
     scale: 1.3;
 }
 
-.card-1 .deal-card-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1.5vw;
-}
-
+.card-1 .deal-card-content,
 .card-2 .deal-card-content {
     width: 100%;
     height: 100%;
@@ -1114,7 +1106,7 @@ footer .info {
     }
 
     .hero-section {
-        height: 100%;
+        height: 100vw;
         overflow-x: hidden;
     }
 
@@ -1220,7 +1212,7 @@ footer .info {
 
     .hero-content-pt-2 .content-wrapper .side-2 {
         width: 84.5vw;
-        transform: scale(1.21);
+        /* transform: scale(1.21); */
     }
 
 
@@ -1284,7 +1276,6 @@ footer .info {
 
     .categories-section .categories-cards {
         justify-content: center;
-        /* gap: 16vw; */
     }
 
     .categories-section a {
@@ -1295,13 +1286,189 @@ footer .info {
         position: relative;
         width: 41vw;
         height: 50vw;
-        padding-left: 1.5vw;
-        background-color: red;
     }
 
     .card .card-img {
-        width: 38vw;
+        width: 39.4vw;
         height: 30vw;
+    }
+
+    .card-content .name-price {
+        height: 5.5vw;
+        width: 39.3vw;
+    }
+
+    .card-content .name-price h3 {
+        font-size: 4vw;
+    }
+
+    .card-content .name-price h5 {
+        font-size: 2vw;
+        right: 4%;
+    }
+
+    .card-content p {
+        font-size: 2.5vw;
+        font-weight: 400;
+        margin-bottom: 0.6vw;
+    }
+
+    .card-btn {
+        width: 100%;
+        padding: 0.4vw 1vw;
+    }
+
+    .card .card-btn button {
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    .card .rating {
+        font-size: 2.5vw;
+    }
+
+    .deals-section {
+        height: 100vw;
+    }
+
+    .deals-section h1 {
+        font-size: 6vw;
+    }
+
+    .deals-section h4 {
+        font-size: 2.5vw;
+    }
+
+    .deals-section .underline {
+        height: 0.4vw;
+    }
+
+    .deals-section .deals-cards {
+        flex-direction: column;
+        gap: 0;
+        height: 60vw;
+        border-radius: 1vw;
+    }
+
+    .deals-cards .card-1>h2 {
+        width: 20vw;
+        font-size: 3vw;
+    }
+
+    .deals-cards .card-2>h2 {
+        width: 20vw;
+        font-size: 3vw;
+        top: 53.4%;
+    }
+
+    .deals-cards .card-1,
+    .deals-cards .card-2 {
+        width: 100%;
+        height: 50%;
+        margin-bottom: 2vw;
+    }
+
+    .deals-cards .card-1 img {
+        height: 65%;
+        object-position: left;
+        object-fit: contain;
+        margin-left: 1vw;
+    }
+
+    .deals-cards .card-2 img {
+        height: 65%;
+        object-position: center;
+        object-fit: contain;
+        scale: 1.3;
+    }
+
+    .deal-card-content h3 {
+        font-size: 2.3vw;
+    }
+
+    .deal-card-content h2 {
+        font-size: 6vw;
+    }
+
+    .deal-card-content p {
+        font-size: 2.4vw;
+    }
+
+
+    .price-sale h4 {
+        font-size: 2.4vw;
+    }
+
+    .price-sale h5 {
+        font-size: 2vw;
+    }
+
+    .deals-section .deal-banner {
+        height: 20vw;
+    }
+
+    .deal-banner .text h2 {
+        font-size: 4.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .deal-banner .text p {
+        font-size: 2.8vw;
+    }
+
+    .deal-banner h3 {
+        font-size: 3vw;
+    }
+
+    .best-sellers-section {
+        width: 100%;
+        height: 100vh;
+        padding: 1.5vw 5vw;
+        position: relative;
+    }
+
+    .best-sellers-section .best-sellers-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .best-sellers-heading h1 {
+        font-size: 2vw;
+        font-weight: 800;
+    }
+
+    .best-sellers-heading h4 {
+        font-size: 1.1vw;
+        font-weight: 500;
+    }
+
+    .best-sellers-section .underline {
+        width: 100%;
+        height: 0.13vw;
+        background-color: var(--items-bg-color);
+        margin-top: 1vw;
+    }
+
+    .best-sellers-section .best-sellers-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.7vw;
+        margin-top: 2vw;
+        width: 100%;
+    }
+
+    .best-sellers-cards .card {
+        position: relative;
+        width: 20vw;
+        height: 25.7vw;
+        padding-left: 1.5vw;
+    }
+
+    .card .card-img {
+        width: 20vw;
+        height: 15vw;
         background-color: var(--items-bg-color);
         border-radius: 0.5vw;
     }
@@ -1315,8 +1482,7 @@ footer .info {
 
     .card-content {
         width: 100%;
-        height: 15vw;
-        /* min-height: auto; */
+        min-height: auto;
         position: relative;
     }
 
@@ -1325,14 +1491,12 @@ footer .info {
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: 7vw;
-        background-color: blue;
+        height: 3vw;
     }
 
     .card-content .name-price h3 {
-        font-size: 1vw;
+        font-size: 1.8vw;
         font-weight: 700;
-        color: white;
     }
 
     .card-content .name-price h5 {
@@ -1343,22 +1507,61 @@ footer .info {
     }
 
     .card-content p {
-        font-size: 7vw;
+        font-size: 1.1vw;
         font-weight: 400;
         margin-bottom: 0.6vw;
     }
 
-    .card-btn button {
+    .card .card-btn button {
         padding: 0.4vw 1vw;
-        font-size: 2vw;
-        color: var(--black-text);
-        border: 1px solid;
+        font-size: 1.1vw;
+        border: 1px solid #000;
         border-radius: 1vw;
         margin-top: 1.5vw;
+        background-color: transparent;
         margin-bottom: 0.6vw;
     }
 
-    .card .card-btn button:hover {
+    /* CARD 1 CSS */
+    .best-sellers-cards .card-1 {
+        position: relative;
+        width: 22vw;
+        height: 35vw;
+        padding-left: 1.5vw;
+        background-color: var(--items-bg-color);
+        border-radius: 1vw;
+        overflow: hidden;
+    }
+
+    .card-1 .card-img {
+        width: 19vw;
+        height: 15vw;
+        border-radius: 0.5vw;
+        position: absolute;
+        bottom: 10.8%;
+    }
+
+    .best-sellers-cards .card-1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        scale: 1.5;
+        padding-right: 1vw;
+    }
+
+    .card-1 .card-btn button {
+        padding: 0.4vw 1vw;
+        color: var(--black-text);
+        border: 1px solid;
+        border-radius: 0.5vw;
+        font-size: 1.1vw;
+        margin-top: 2vw;
+        position: relative;
+        z-index: 999;
+    }
+
+    .card-1 .card-btn button:hover {
         background-color: var(--black-text);
         border: none;
         color: var(--white-text);
@@ -1366,103 +1569,27 @@ footer .info {
         transition: all ease 0.7s;
     }
 
-        .card .rating {
-            font-size: 3vw;
-        }
-    /* 
-    .card-content .name-price {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .card-1 .card-content {
         width: 100%;
-        height: 3vw;
+        position: relative;
+        padding-top: 3vw;
     }
 
-    .card-content .name-price h3 {
-        font-size: 2.3vw;
+    .card-1 .card-content .name-price h3 {
+        font-size: 1.8vw;
+        font-weight: 700;
     }
 
-    .card-content .name-price h5 {
-        font-size: 1.4vw;
-        right: 0%;
-        top: 37%;
-    }
-
-    .card-content p {
-        font-size: 1.4vw;
-        width: 13vw;
-    }
-
-    .card .card-btn button {
-        font-size: 1.4vw;
-    }
-
-    .card .rating {
-        font-size: 1.4vw;
-    } */
-
-    .deals-section {
-        width: 100%;
-        height: 40vw;
-    }
-
-    .deals-section h1 {
-        font-size: 3.2vw;
-    }
-
-    .deals-section h4 {
-        font-size: 1.4vw;
-    }
-
-    .deals-section .underline {
-        height: 0.4vw;
-    }
-
-    .deals-section .deals-cards {
-        height: 18vw;
-    }
-
-    .deals-cards .card-1,
-    .deals-cards .card-2 {
-        height: 100%;
-    }
-
-    .deals-cards .card-1 img,
-    .deals-cards .card-2 img {
-        height: 60%;
-        margin-left: 1vw;
-    }
-
-    .card-1 .deal-card-content,
-    .card-2 .deal-card-content {
-        padding: 3vw;
-    }
-
-    .deal-card-content h3 {
-        font-size: 1.4vw;
+    .card-1 .card-content p {
+        font-size: 1.1vw;
         font-weight: 400;
+        margin-top: 2vw;
     }
 
-    .deal-card-content h2 {
-        font-size: 3vw;
-    }
 
-    .deal-card-content p {
-        font-size: 1.4vw;
-    }
 
-    .price-sale h4 {
-        font-size: 1.7vw;
-    }
 
-    .price-sale h5 {
-        font-size: 1.4vw;
-    }
-
-    .deals-section .deal-banner {
-        height: 9vw;
-        font-size: 1.4vw;
-    }
+    /* 
 
     .best-sellers-section {
         height: 50vw;
@@ -1499,7 +1626,7 @@ footer .info {
     }
 
 
-    /* CARD 1 CSS */
+    CARD 1 CSS 
     .best-sellers-cards .card-1 {
         height: 38vw;
     }
@@ -1600,45 +1727,45 @@ footer .info {
     footer .info .pt-3 h5 {
         font-size: 1.5vw;
     }
-}
+} */
 
-@media only screen and (min-width: 1024px) and (max-device-width: 1278px) {
-    nav {
-        width: 100%;
-        height: 3vw;
-        margin-top: 1vw;
-        display: flex;
-        position: relative;
-        padding: 0 5vw;
-    }
+    @media only screen and (min-width: 1024px) and (max-device-width: 1278px) {
+        nav {
+            width: 100%;
+            height: 3vw;
+            margin-top: 1vw;
+            display: flex;
+            position: relative;
+            padding: 0 5vw;
+        }
 
-    nav h1 {
-        font-size: 2vw;
-    }
+        nav h1 {
+            font-size: 2vw;
+        }
 
-    nav .nav-pt-1,
-    nav .nav-pt-2 {
-        gap: 2.4vw;
-    }
+        nav .nav-pt-1,
+        nav .nav-pt-2 {
+            gap: 2.4vw;
+        }
 
-    nav .nav-pt-1 h4,
-    nav .nav-pt-2 h4 {
-        max-width: 10vw;
-        font-size: 1.2vw;
-    }
+        nav .nav-pt-1 h4,
+        nav .nav-pt-2 h4 {
+            max-width: 10vw;
+            font-size: 1.2vw;
+        }
 
-    .nav-pt-2 i:nth-child(2) {
-        opacity: 0;
-    }
+        .nav-pt-2 i:nth-child(2) {
+            opacity: 0;
+        }
 
-    .search-box {
-        border-radius: 0.7vw;
-        border: none;
-        background-color: #e2e7ea69;
-        padding: 0.5vw 1vw;
-    }
+        .search-box {
+            border-radius: 0.7vw;
+            border: none;
+            background-color: #e2e7ea69;
+            padding: 0.5vw 1vw;
+        }
 
-    .search-box:focus {
-        outline: none;
+        .search-box:focus {
+            outline: none;
+        }
     }
-}
