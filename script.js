@@ -3,8 +3,10 @@ function loaderAnimation() {
 	tl.to(".loader-section", {
 		opacity: 0,
 		duration: 2.2,
-		delay:2.4,
+		delay: 2.4,
 		ease: "power4",
+		onComplete: () =>
+			document.querySelector("body").classList.remove("disable-scroll"),
 	});
 
 	gsap.from(".loader h1", {
@@ -213,7 +215,7 @@ function fullAnimation() {
 	});
 
 	tl.from(".deals-section .underline", {
-		width: "0%",
+		width: "0vw",
 		opacity: 0,
 		duration: 3,
 		scrollTrigger: {
@@ -224,7 +226,6 @@ function fullAnimation() {
 			scrub: 2,
 		},
 	});
-
 
 	tl.from(".deals-cards .card-1", {
 		x: -80,
@@ -279,7 +280,7 @@ function fullAnimation() {
 	});
 
 	tl.from(".best-sellers-section .underline", {
-		width: "0%",
+		width: "0vw",
 		opacity: 0,
 		duration: 3,
 		scrollTrigger: {
@@ -332,7 +333,7 @@ function fullAnimation() {
 	});
 
 	tl.from(".services-section .underline", {
-		width: "0%",
+		width: "0vw",
 		opacity: 0,
 		duration: 3,
 		scrollTrigger: {
@@ -373,7 +374,7 @@ function fullAnimation() {
 	});
 }
 
-// loaderAnimation();
+loaderAnimation();
 heroSectionAnimation();
 darkMode();
 menuAnimation();

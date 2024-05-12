@@ -120,6 +120,19 @@ body {
         background-color: #333;
     }
 
+    .best-sellers-cards .card .card-btn button {
+        background-color: transparent;
+        border: 1px solid;
+        color: var(--white-text);
+    }
+
+    .best-sellers-cards .card .card-btn button:hover {
+        background-color: var(--white-text);
+        color: var(--black-text);
+        border: none;
+        transition: all ease 0.7s;
+    }
+
     .best-sellers-cards .card-1 button {
         background-color: transparent;
         border: 1px solid;
@@ -161,8 +174,12 @@ body {
 
 }
 
+.disable-scroll {
+    overflow: hidden;
+}
+
 .loader-section {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -1358,7 +1375,6 @@ footer .info {
     .deals-cards .card-2>h2 {
         width: 20vw;
         font-size: 3vw;
-        top: 53.4%;
     }
 
     .deals-cards .card-1,
@@ -1422,7 +1438,7 @@ footer .info {
 
     .best-sellers-section {
         width: 100%;
-        height: 100vw;
+        height: 136vw;
         padding: 1.5vw 5vw;
         position: relative;
     }
@@ -1450,16 +1466,15 @@ footer .info {
 
     .best-sellers-cards .card {
         position: relative;
-        width: 20vw;
+        width: 100%;
         height: 25.7vw;
+        display: flex;
         padding-left: 1.5vw;
     }
 
     .best-sellers-cards .card .card-img {
-        width: 20vw;
-        height: 15vw;
-        background-color: var(--items-bg-color);
-        border-radius: 0.5vw;
+        width: 30vw;
+        height: 25vw;
     }
 
     .best-sellers-cards .card .card-img img {
@@ -1469,10 +1484,17 @@ footer .info {
         object-position: center;
     }
 
+    .best-sellers-cards .card-content .rating {
+        margin-left: 2vw;
+    }
+
     .best-sellers-cards .card-content {
-        width: 100%;
-        min-height: auto;
-        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        padding-top: 2vw;
+
     }
 
     .best-sellers-cards .card-content .name-price {
@@ -1480,49 +1502,44 @@ footer .info {
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: 3vw;
+        height: 6vw;
     }
 
     .best-sellers-cards .card-content .name-price h3 {
-        font-size: 1.8vw;
-        font-weight: 700;
+        font-size: 4.5vw;
+        margin-left: 2vw;
     }
 
     .best-sellers-cards .card-content .name-price h5 {
-        font-size: 1vw;
-        font-weight: 400;
-        position: absolute;
-        right: 8%;
+        font-size: 2vw;
+        margin-left: 2vw;
     }
 
     .best-sellers-cards .card-content p {
-        font-size: 1.1vw;
-        font-weight: 400;
-        margin-bottom: 0.6vw;
+        font-size: 2.5vw;
+        margin-left: 2vw;
+    }
+
+    .best-sellers-cards .card .card-btn {
+        display: flex;
+        align-items: flex-end;
+        width: 30%;
     }
 
     .best-sellers-cards .card .card-btn button {
-        padding: 0.4vw 1vw;
-        font-size: 1.1vw;
-        border: 1px solid #000;
-        border-radius: 1vw;
-        margin-top: 1.5vw;
-        background-color: transparent;
-        margin-bottom: 0.6vw;
+        padding: 1vw 1vw;
+        font-size: 2.1vw;
     }
 
     /* CARD 1 CSS */
     .best-sellers-cards .card-1 {
         position: relative;
-        width: 62vw;
-        height: 25vw;
+        width: 100%;
+        height: 50%;
         padding-left: 1.5vw;
         background-color: var(--items-bg-color);
         border-radius: 1vw;
-        overflow: hidden;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .card-1 .card-img {
@@ -1531,7 +1548,6 @@ footer .info {
         border-radius: 0.5vw;
         position: absolute;
         right: 0;
-        /* bottom: %; */
     }
 
     .best-sellers-cards .card-1 img {
@@ -1544,44 +1560,89 @@ footer .info {
     }
 
     .card-1 .card-btn button {
-        padding: 0.4vw 1vw;
-        color: var(--black-text);
-        border: 1px solid;
-        border-radius: 0.5vw;
-        font-size: 3vw;
-        margin-top: 6vw;
-        width: 59%;
-        /* height: 10%; */
+        font-size: 2.5vw;
+        width: 20vw;
         position: absolute;
         z-index: 999;
         left: 1.4vw;
-
-    }
-
-    .card-1 .card-btn button:hover {
-        background-color: var(--black-text);
-        border: none;
-        color: var(--white-text);
-        background-color: #333;
-        transition: all ease 0.7s;
+        bottom: 13%;
     }
 
     .card-1 .card-content {
-        width: 96vw;
-        height: 25vw;
+        width: 178vw;
+        height: 35vw;
         position: relative;
         padding: 6vw 0 0 0;
-        background-color: red;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .card-1 .card-content .name-price h3 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .card-1 .card-content p {
         font-size: 2.4vw;
-        font-weight: 400;
+        position: absolute;
+        left: 0;
+        top: 35%;
+        margin-top: 5vw;
+    }
+
+
+    .services-section {
+        width: 100vw;
+        height: 165vw;
+        padding: 1.5vw 5vw;
+    }
+
+    .services-section h1 {
+        font-size: 6vw;
+    }
+
+    .services-section .underline {
+        height: 0.4vw;
+    }
+
+    .services-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 13vw;
+        width: 100%;
+    }
+
+    .services-cards .card-service {
+        position: relative;
         margin-top: 2vw;
+        width: 100%;
+        height: 35.7vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-service .card-image {
+        height: 100%;
+    }
+
+    .card-service .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 1vw 1vw 0 0;
+    }
+
+    .card-service h3 {
+        font-size: 4vw;
+        padding-top: 2vw;
+        padding-left: 1.5vw;
+    }
+
+    .card-service p {
+        font-size: 2.5vw;
+        padding-top: 0.6vw;
+        padding-left: 1.5vw;
     }
 
 
