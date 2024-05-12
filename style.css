@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @font-face {
     font-family: indie;
     src: url("fonts/IndieFlower-Regular.woff");
@@ -22,7 +15,6 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: qanelas;
 }
@@ -43,22 +35,6 @@ body {
     color: var(--white-text);
 
     a {
-        color: var(--white-text);
-    }
-
-    nav .search-box::-webkit-input-placeholder {
-        color: var(--white-text);
-    }
-
-    nav .search-box::-moz-placeholder {
-        color: var(--white-text);
-    }
-
-    nav .search-box:-ms-input-placeholder {
-        color: var(--white-text);
-    }
-
-    nav .search-box::-ms-input-placeholder {
         color: var(--white-text);
     }
 
@@ -88,8 +64,6 @@ body {
         background-color: var(--white-text);
         color: var(--black-text);
         border: none;
-        -webkit-transition: all ease 0.7s;
-        -o-transition: all ease 0.7s;
         transition: all ease 0.7s;
     }
 
@@ -107,18 +81,16 @@ body {
         background-color: var(--loader-color);
     }
 
-    .categories-filter button {
+    .categories-filter .filter-btn button {
         background-color: transparent;
         color: var(--white-text);
         border: 1px solid;
     }
 
-    .categories-filter button:hover {
+    .categories-filter .filter-btn button:hover {
         background-color: var(--white-text);
         color: var(--black-text);
         border: none;
-        -webkit-transition: all ease 0.7s;
-        -o-transition: all ease 0.7s;
         transition: all ease 0.7s;
     }
 
@@ -132,8 +104,6 @@ body {
         background-color: var(--white-text);
         color: var(--black-text);
         border: none;
-        -webkit-transition: all ease 0.7s;
-        -o-transition: all ease 0.7s;
         transition: all ease 0.7s;
     }
 
@@ -160,8 +130,6 @@ body {
         background-color: var(--white-text);
         color: var(--black-text);
         border: none;
-        -webkit-transition: all ease 0.7s;
-        -o-transition: all ease 0.7s;
         transition: all ease 0.7s;
     }
 
@@ -175,8 +143,6 @@ body {
         background-color: var(--white-text);
         color: var(--black-text);
         border: none;
-        -webkit-transition: all ease 0.7s;
-        -o-transition: all ease 0.7s;
         transition: all ease 0.7s;
     }
 
@@ -190,8 +156,6 @@ body {
         background-color: var(--white-text);
         color: var(--black-text);
         border: none;
-        -webkit-transition: all ease 0.7s;
-        -o-transition: all ease 0.7s;
         transition: all ease 0.7s;
     }
 
@@ -215,14 +179,8 @@ body {
 }
 
 .loader-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -235,18 +193,9 @@ body {
 
 .loader {
     overflow-y: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -264,30 +213,7 @@ body {
         var(--c) 50% 50%,
         var(--c) 100% 50%;
     background-size: 20% 100%;
-    -webkit-animation: l1 1.5s infinite linear;
     animation: l1 1.5s infinite linear;
-}
-
-@-webkit-keyframes l1 {
-    0% {
-        background-size: 20% 100%, 20% 100%, 20% 100%
-    }
-
-    33% {
-        background-size: 20% 10%, 20% 100%, 20% 100%
-    }
-
-    50% {
-        background-size: 20% 100%, 20% 10%, 20% 100%
-    }
-
-    66% {
-        background-size: 20% 100%, 20% 100%, 20% 10%
-    }
-
-    100% {
-        background-size: 20% 100%, 20% 100%, 20% 100%
-    }
 }
 
 @keyframes l1 {
@@ -323,22 +249,14 @@ body {
     width: 100%;
     height: 2vw;
     background-color: var(--info-color);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     color: var(--white-text);
     padding: 1.5vw 5vw;
 }
 
 .info .pt-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 1vw;
 }
@@ -350,8 +268,6 @@ body {
 }
 
 .info .pt-3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 3vw;
 }
@@ -360,10 +276,7 @@ nav {
     width: 100%;
     height: 3vw;
     margin-top: 1vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     position: relative;
     padding: 0 5vw;
@@ -378,11 +291,7 @@ nav h1 {
 
 nav .nav-pt-1,
 nav .nav-pt-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 2vw;
     position: relative;
@@ -429,26 +338,6 @@ nav #dark {
     padding: 0.5vw 4vw;
 }
 
-.search-box::-webkit-input-placeholder {
-    position: absolute;
-    left: 1.5vw;
-}
-
-.search-box::-moz-placeholder {
-    position: absolute;
-    left: 1.5vw;
-}
-
-.search-box:-ms-input-placeholder {
-    position: absolute;
-    left: 1.5vw;
-}
-
-.search-box::-ms-input-placeholder {
-    position: absolute;
-    left: 1.5vw;
-}
-
 .search-box::placeholder {
     position: absolute;
     left: 1.5vw;
@@ -463,20 +352,14 @@ nav #dark {
     height: 83vh;
     position: relative;
     padding: 1.5vw 5vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
 .content-wrapper {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     border-radius: 1vw;
-    background: -o-linear-gradient(339deg, rgba(244 248,
-                249, 1) 44%, rgba(244 248, 249, 1) 44%, rgba(225, 230, 234, 1) 86%);
     background: linear-gradient(111deg, rgba(244 248,
                 249, 1) 44%, rgba(244 248, 249, 1) 44%, rgba(225, 230, 234, 1) 86%);
 }
@@ -526,8 +409,6 @@ nav #dark {
     border: none;
     color: var(--white-text);
     background-color: #333;
-    -webkit-transition: all ease 0.7s;
-    -o-transition: all ease 0.7s;
     transition: all ease 0.7s;
 }
 
@@ -541,9 +422,7 @@ nav #dark {
 .hero-content-pt-2 .content-wrapper .side-2 img {
     width: 103%;
     height: 96.7%;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center;
     position: absolute;
     top: 3%;
@@ -566,11 +445,7 @@ nav #dark {
 }
 
 .categories-filter {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 0.7vw;
 }
@@ -600,21 +475,13 @@ nav #dark {
     border: none;
     color: var(--white-text);
     background-color: #333;
-    -webkit-transition: all ease 0.7s;
-    -o-transition: all ease 0.7s;
     transition: all ease 0.7s;
 }
 
 .categories-section .filter-btn {
     width: 27vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
     position: relative;
 }
@@ -627,10 +494,7 @@ nav #dark {
 }
 
 .categories-section .categories-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 2vw;
     margin-top: 2vw;
@@ -639,14 +503,8 @@ nav #dark {
 }
 
 .categories-section a {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 4vw;
 }
@@ -668,9 +526,7 @@ nav #dark {
 .card .card-img img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center;
 }
 
@@ -681,14 +537,8 @@ nav #dark {
 }
 
 .card-content .name-price {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     height: 3vw;
@@ -727,8 +577,6 @@ nav #dark {
     border: none;
     color: var(--white-text);
     background-color: #333;
-    -webkit-transition: all ease 0.7s;
-    -o-transition: all ease 0.7s;
     transition: all ease 0.7s;
 }
 
@@ -740,14 +588,8 @@ nav #dark {
 }
 
 .deals-section .deals-heading {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -769,8 +611,6 @@ nav #dark {
 }
 
 .deals-section .deals-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 2vw;
     margin-top: 2vw;
@@ -799,14 +639,8 @@ nav #dark {
     width: 50%;
     height: 100%;
     background-color: var(--items-bg-color);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -815,28 +649,20 @@ nav #dark {
     width: 50%;
     height: 100%;
     background-color: var(--items-bg-color);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .deals-cards .card-1 img {
     height: 65%;
-    -o-object-position: left;
     object-position: left;
-    -o-object-fit: contain;
     object-fit: contain;
     margin-left: 1vw;
 }
 
 .deals-cards .card-2 img {
     height: 65%;
-    -o-object-position: center;
     object-position: center;
-    -o-object-fit: contain;
     object-fit: contain;
     scale: 1.3;
 }
@@ -845,15 +671,8 @@ nav #dark {
 .card-2 .deal-card-content {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 1.5vw;
 }
@@ -877,13 +696,9 @@ nav #dark {
 }
 
 .deal-card-content .price-sale {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 1.5vw;
     margin-bottom: 1vw;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -900,14 +715,8 @@ nav #dark {
 }
 
 .deals-section .deal-banner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 2vw;
     margin-top: 2vw;
@@ -916,7 +725,6 @@ nav #dark {
     position: relative;
     padding: 4vw;
     border-radius: 1vw;
-    background: -o-linear-gradient(339deg, rgba(244, 248, 249, 1) 4%, rgba(244, 248, 249, 1) 54%, rgba(225, 230, 234, 1) 56%);
     background: linear-gradient(111deg, rgba(244, 248, 249, 1) 4%, rgba(244, 248, 249, 1) 54%, rgba(225, 230, 234, 1) 56%);
 }
 
@@ -928,14 +736,8 @@ nav #dark {
 }
 
 .best-sellers-section .best-sellers-heading {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     overflow: hidden;
 }
@@ -958,10 +760,7 @@ nav #dark {
 }
 
 .best-sellers-section .best-sellers-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 1.7vw;
     margin-top: 2vw;
@@ -985,9 +784,7 @@ nav #dark {
 .card .card-img img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center;
 }
 
@@ -998,14 +795,8 @@ nav #dark {
 }
 
 .card-content .name-price {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     height: 3vw;
@@ -1061,9 +852,7 @@ nav #dark {
 .best-sellers-cards .card-1 img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center;
     scale: 1.5;
     padding-right: 1vw;
@@ -1085,8 +874,6 @@ nav #dark {
     border: none;
     color: var(--white-text);
     background-color: #333;
-    -webkit-transition: all ease 0.7s;
-    -o-transition: all ease 0.7s;
     transition: all ease 0.7s;
 }
 
@@ -1112,7 +899,7 @@ nav #dark {
     height: 90vh;
     padding: 1.5vw 5vw;
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .services-section h1 {
@@ -1128,14 +915,8 @@ nav #dark {
 }
 
 .services-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     gap: 3vw;
 }
@@ -1158,9 +939,7 @@ nav #dark {
 .card-service .card-image img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center;
     border-radius: 1vw 1vw 0 0;
 }
@@ -1183,14 +962,8 @@ nav #dark {
     width: 100%;
     height: 60vh;
     background-color: #F4F9FF;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 1.5vw 5vw;
     position: relative;
@@ -1223,11 +996,7 @@ nav #dark {
 }
 
 .logo-side .payment-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-top: 1vw;
     gap: 1vw;
@@ -1314,22 +1083,14 @@ nav #dark {
 footer .info {
     width: 100%;
     background-color: var(--info-color);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     color: var(--white-text);
     padding: 0.6vw 5vw;
 }
 
 .info .pt-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 1vw;
 }
@@ -1341,8 +1102,6 @@ footer .info {
 }
 
 .info .pt-3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 3vw;
 }
@@ -1371,8 +1130,6 @@ footer .info {
     }
 
     .info .pt-1 {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -1388,8 +1145,6 @@ footer .info {
 
     nav {
         height: 7vw;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
         justify-content: space-between;
         overflow: hidden;
     }
@@ -1410,20 +1165,10 @@ footer .info {
         right: -100%;
         top: 0;
         padding: 80px 60px;
-        -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
         align-items: flex-start;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
         z-index: 99999;
         color: var(--black-text);
@@ -1439,14 +1184,8 @@ footer .info {
 
     .menu {
         width: 5vw;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         font-size: 6vw;
     }
@@ -1481,12 +1220,7 @@ footer .info {
 
     .hero-content-pt-2 .content-wrapper {
         padding: 4vw 3vw;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
         height: 88.3vw;
     }
@@ -1498,7 +1232,6 @@ footer .info {
 
     .hero-content-pt-2 .content-wrapper .side-2 img {
         width: 100%;
-        -o-object-fit: cover;
         object-fit: cover;
     }
 
@@ -1556,8 +1289,6 @@ footer .info {
     }
 
     .categories-section .categories-cards {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -1627,9 +1358,6 @@ footer .info {
     }
 
     .deals-section .deals-cards {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
         gap: 0;
         height: 60vw;
@@ -1655,18 +1383,14 @@ footer .info {
 
     .deals-cards .card-1 img {
         height: 65%;
-        -o-object-position: left;
         object-position: left;
-        -o-object-fit: contain;
         object-fit: contain;
         margin-left: 1vw;
     }
 
     .deals-cards .card-2 img {
         height: 65%;
-        -o-object-position: center;
         object-position: center;
-        -o-object-fit: contain;
         object-fit: contain;
         scale: 1.3;
     }
@@ -1729,10 +1453,7 @@ footer .info {
     }
 
     .best-sellers-section .best-sellers-cards {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 1.7vw;
         margin-top: 2vw;
@@ -1744,8 +1465,6 @@ footer .info {
         position: relative;
         width: 100%;
         height: 25.7vw;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         padding-left: 1.5vw;
     }
@@ -1758,9 +1477,7 @@ footer .info {
     .best-sellers-cards .card .card-img img {
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
         object-fit: cover;
-        -o-object-position: center;
         object-position: center;
     }
 
@@ -1770,12 +1487,7 @@ footer .info {
 
     .best-sellers-cards .card-content {
         width: 50%;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
         gap: 3vw;
         padding-top: 2vw;
@@ -1783,14 +1495,8 @@ footer .info {
     }
 
     .best-sellers-cards .card-content .name-price {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
         justify-content: space-between;
         width: 100%;
         height: 6vw;
@@ -1812,11 +1518,7 @@ footer .info {
     }
 
     .best-sellers-cards .card .card-btn {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
         align-items: flex-end;
         width: 30%;
     }
@@ -1834,8 +1536,6 @@ footer .info {
         padding-left: 1.5vw;
         background-color: var(--items-bg-color);
         border-radius: 1vw;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
     }
 
@@ -1850,9 +1550,7 @@ footer .info {
     .best-sellers-cards .card-1 img {
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
         object-fit: cover;
-        -o-object-position: center;
         object-position: center;
         scale: 1.5;
         padding-right: 1vw;
@@ -1872,15 +1570,8 @@ footer .info {
         height: 35vw;
         position: relative;
         padding: 6vw 0 0 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -1912,12 +1603,7 @@ footer .info {
     }
 
     .services-cards {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
         gap: 13vw;
         width: 100%;
@@ -1928,12 +1614,7 @@ footer .info {
         margin-top: 2vw;
         width: 100%;
         height: 35.7vw;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -1944,9 +1625,7 @@ footer .info {
     .card-service .card-image img {
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
         object-fit: cover;
-        -o-object-position: center;
         object-position: center;
         border-radius: 1vw 1vw 0 0;
     }
@@ -1968,11 +1647,7 @@ footer .info {
         width: 100%;
         height: 50vw;
         background-color: #F4F9FF;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         padding: 1.5vw 5vw;
         position: relative;
@@ -2070,8 +1745,6 @@ footer .info {
     }
 
     footer .info .pt-1 {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
     }
 

@@ -360,16 +360,17 @@ function fullAnimation() {
 	});
 
 	tl.from(".footer-content", {
-		y: 100,
+		y: -70,
 		opacity: 0,
 		duration: 1,
 		stagger: 2,
 		scrollTrigger: {
 			trigger: "footer",
 			scroller: "body",
-			start: "top 70%",
+			start: "top 80%",
 			end: "top 50%",
 			scrub: 2,
+			markers: true,
 		},
 	});
 }
