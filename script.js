@@ -370,7 +370,6 @@ function fullAnimation() {
 			start: "top 80%",
 			end: "top 50%",
 			scrub: 2,
-			markers: true,
 		},
 	});
 }
