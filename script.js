@@ -367,7 +367,7 @@ function fullAnimation() {
 		scrollTrigger: {
 			trigger: "footer",
 			scroller: "body",
-			start: "top 90%",
+			start: "top 100%",
 			end: "top 50%",
 			scrub: 2,
 		},
